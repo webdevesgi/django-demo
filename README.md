@@ -1,3 +1,5 @@
+![alt text](http://www.python.org/community/logos/python-logo.png "Python logo")
+
 Django (Python) demo by @pgrimaud
 ===========
 
