@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'crud.views.home'),
-	url(r'^language/$', 'crud.views.language'),
+	url(r'^language/(?P<language>.+)/$', 'crud.views.language'),
 	# url(r'^$', 'djangodemo.views.home', name='home'),
     # url(r'^djangodemo/', include('djangodemo.foo.urls')),
 

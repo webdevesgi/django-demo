@@ -2,6 +2,7 @@
 # Create your views here.
 
 from django.shortcuts import render
+from django.http import HttpResponse
 from models import Framework
 
 def home(request):
@@ -11,6 +12,8 @@ def home(request):
   
   return render(request, 'allframework.html', {'framework_list': framework_list, 'language_list':language_list})
   
-def language(request):
+def language(request, language):
+
+  framework_list = Framework.objects.filter(language=language)
   
-  return render(request, 'language.html', locals())
+  return render(request, 'framework_language.html', {'framework_list': framework_list, 'language':language})
