@@ -1,12 +1,41 @@
-<html>
-<head>
-</head>
-<body>
-<h1>Tous les frameworks {{language}}</h1>
-<ul>
-{% for framework in framework_list %}
-<li>{{framework.nom}}</li>
-{% endfor %}
-</ul>
-</body>
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<link href="{{STATIC_URL}}css/bootstrap.css" rel="stylesheet">
+		<link href="{{STATIC_URL}}css/bootstrap-responsive.css" rel="stylesheet">
+		<title>Accueil</title>
+		<style>
+		  body {
+			padding-top: 60px;
+		  }
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="navbar-inner">
+			<div class="container">
+			  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="brand" href="/">Django Demo</a>
+			  <div class="nav-collapse collapse">
+				<ul class="nav">
+				  <li class="">
+					<a href="/admin/">Admin</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="span12">
+		<h1>Tous les frameworks en {{language}}</h1>
+			<ul>
+				{% for framework in framework_list %}
+					<li>{{framework.nom}}</li>
+				{% endfor %}
+			</ul>
+	</body>
 </html>

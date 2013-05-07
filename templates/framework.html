@@ -31,17 +31,8 @@
 		  </div>
 		</div>
 		<div class="span12">
-		<h1>Tous les frameworks</h1>
-			<ul>
-				{% for framework in framework_list %}
-					<li>{{framework.nom}} en {{framework.language}} <a href="/framework/{{framework.id}}/">(voir)</a></li>
-				{% endfor %}
-			</ul>
-		<h1>Différents languages</h1>
-			<ul>
-				{% for lang in language_list %}
-					<li>{{lang.language}} <a href="/language/{{lang.language}}/">(voir)</a></li>
-				{% endfor %}
-		</ul>
+		<h1>{{framework.nom}}</h1>
+		<h4>Language : {{framework.language}}</h4>
+		<p>Commentaire : {{framework.commentaire}}</p>
 	</body>
 </html>

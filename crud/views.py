@@ -17,3 +17,9 @@ def language(request, language):
   framework_list = Framework.objects.filter(language=language)
   
   return render(request, 'framework_language.html', {'framework_list': framework_list, 'language':language})
+  
+def framework(request, id):
+
+  frm = Framework.objects.get(id=id)
+
+  return render(request, 'framework.html', {'framework': frm})

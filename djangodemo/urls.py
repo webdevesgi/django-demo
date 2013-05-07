@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'crud.views.home'),
 	url(r'^language/(?P<language>.+)/$', 'crud.views.language'),
-	# url(r'^$', 'djangodemo.views.home', name='home'),
+	url(r'^framework/(?P<id>\d)/$', 'crud.views.framework'),
     # url(r'^djangodemo/', include('djangodemo.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
