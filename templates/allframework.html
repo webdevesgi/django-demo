@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Tous les frameworks</h1>
+<ul>
+{% for framework in framework_list %}
+<li>{{framework.nom}} en {{framework.language}}</li>
+{% endfor %}
+</ul>
+<h1>Différents languages de prog</h1>
+<ul>
+{% for lang in language_list %}
+<li>{{lang.language}} <a href="/language/{{lang.language}}/">(voir)</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
