@@ -23,3 +23,6 @@ def framework(request, id):
   frm = Framework.objects.get(id=id)
 
   return render(request, 'framework.html', {'framework': frm})
+  
+def edit(request, id):
+  
