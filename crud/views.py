@@ -26,3 +26,18 @@ def framework(request, id):
   
 def edit(request, id):
   
+  frm = Framework.objects.get(id=id)
+  
+  return render(request, 'edit.html', {'framework': frm})
+  
+def delete(request, id):
+
+  Framework.objects.filter(id=id).delete()
+  
+  return render(request, 'delete.html')
+  
+def record(request, id):
+  if request.method == 'POST':
+    # Modify an object in POST only
+  
+	return render(request, 'edited.html')

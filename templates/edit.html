@@ -31,10 +31,15 @@
 		  </div>
 		</div>
 		<div class="span12">
-		<h1>{{framework.nom}}</h1>
-		<h4>Language : {{framework.language}}</h4>
-		<p>Commentaire : {{framework.commentaire}}</p>
-		<a href="/edit/{{framework.id}}"><button class="btn btn-warning">Editer</button></a>
-		<a href="/delete/{{framework.id}}"><button class="btn btn-danger">Supprimer</button></a>
+		<form action="/record/{{framework.id}}/" method="POST">{% csrf_token %}
+		
+			<p>Nom : <input type="text" name="nom" value="{{framework.nom}}"/></p>
+			<p>Language : <input type="text" name="language" value="{{framework.language}}"/></p>
+			<p>Commentaire : <textarea name="commentaire">{{framework.commentaire}}</textarea></p>
+			
+			<input class="btn btn-success" type="submit" value="Enregistrer" />
+			
+		</form>
+		</div>
 	</body>
 </html>

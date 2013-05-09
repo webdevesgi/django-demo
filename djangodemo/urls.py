@@ -10,6 +10,8 @@ urlpatterns = patterns('',
 	url(r'^language/(?P<language>.+)/$', 'crud.views.language'),
 	url(r'^framework/(?P<id>\d)/$', 'crud.views.framework'),
 	url(r'^edit/(?P<id>\d)/$', 'crud.views.edit'),
+	url(r'^delete/(?P<id>\d)/$', 'crud.views.delete'),
+	url(r'^record/(?P<id>\d)/$', 'crud.views.record'),
     # url(r'^djangodemo/', include('djangodemo.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
