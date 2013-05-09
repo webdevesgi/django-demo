@@ -35,9 +35,25 @@ def delete(request, id):
   Framework.objects.filter(id=id).delete()
   
   return render(request, 'delete.html')
+
+def new(request):
+  
+  return render(request, 'new.html')  
+  
+def added(request):
+  if request.method == 'POST':
+    p_commentaire = request.POST['commentaire']
+    p_language = request.POST['language']
+    p_nom = request.POST['nom']
+    new_obj = Framework(nom=p_nom, commentaire=p_commentaire, language=p_language)
+    new_obj.save()
+  
+    return render(request, 'added.html')  
   
 def record(request, id):
   if request.method == 'POST':
-    # Modify an object in POST only
-  
+	p_commentaire = request.POST['commentaire']
+	p_language = request.POST['language']
+	p_nom = request.POST['nom']
+	Framework.objects.filter(id=id).update(commentaire=p_commentaire, nom=p_nom, language=p_language)
 	return render(request, 'edited.html')

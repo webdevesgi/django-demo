@@ -34,11 +34,15 @@
 		  </div>
 		</div>
 		<div class="span12">
-		<h1>Tous les frameworks en {{language}}</h1>
-			<ul>
-				{% for framework in framework_list %}
-					<li>{{framework.nom}}</li>
-				{% endfor %}
-			</ul>
+		<form action="/added/" method="POST">{% csrf_token %}
+		
+			<p>Nom : <input type="text" name="nom" value="{{framework.nom}}"/></p>
+			<p>Language : <input type="text" name="language" value="{{framework.language}}"/></p>
+			<p>Commentaire : <textarea name="commentaire">{{framework.commentaire}}</textarea></p>
+			
+			<input class="btn btn-info" type="submit" value="Ajouter" />
+			
+		</form>
+		</div>
 	</body>
 </html>
