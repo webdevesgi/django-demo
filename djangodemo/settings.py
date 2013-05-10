@@ -69,7 +69,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-	'C:/Users/Pierre/Documents/GitHub/djangodemo/static/',
+	'/home/pierre/workspace/github/django-demo/static/',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -113,6 +113,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 	#'C:/Users/Pierre/Documents/GitHub/djangodemo/templates'
+	'/home/pierre/workspace/github/django-demo/templates/',
 	'C:/Users/Pierre/Documents/GitHub/djangodemo/templates',
 	'C:/Users/Shopping Flux 1/Documents/GitHub/django-demo/templates'
 )
